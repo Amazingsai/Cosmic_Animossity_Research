@@ -1,0 +1,48 @@
+{
+  "schema_version": "2.0",
+  "behavior_id": "ranged_backaway_logic",
+  "behavior_style": "range_based",
+  "source_prompt_id": "P08",
+  "description": "A ranged enemy that backs away if the player is very close, attacks at mid-range, and approaches if the player is far.",
+  "root": {
+    "node_id": "n0",
+    "type": "selector",
+    "children": [
+      {
+        "node_id": "n1",
+        "type": "action",
+        "action": "move_away_from_target",
+        "condition": { "test": "distance_to_target", "op": "<", "value": 300 }
+      },
+      {
+        "node_id": "n2",
+        "type": "sequence",
+        "children": [
+          {
+            "node_id": "n3",
+            "type": "action",
+            "action": "attack",
+            "condition": { "test": "can_attack", "op": "==", "value": true }
+          },
+          {
+            "node_id": "n4",
+            "type": "action",
+            "action": "wait"
+          }
+        ],
+        "condition": { "test": "distance_to_target", "op": ">=", "value": 300 }
+      },
+      {
+        "node_id": "n5",
+        "type": "action",
+        "action": "move_to_target",
+        "condition": { "test": "distance_to_target", "op": ">", "value": 900 }
+      }
+    ]
+  },
+  "parameters": {
+    "attack_range_cm": 900,
+    "retreat_distance_cm": 300,
+    "retreat_health_pct": 0.2
+  }
+}

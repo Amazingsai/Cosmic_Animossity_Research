@@ -1,0 +1,48 @@
+{
+  "schema_version": "2.0",
+  "behavior_id": "alternate_attack_reposition",
+  "behavior_style": "tactical",
+  "source_prompt_id": "P09",
+  "description": "The enemy alternates between attacking when its weapon is ready and repositioning while waiting for its weapon to be ready.",
+  "root": {
+    "node_id": "n0",
+    "type": "selector",
+    "children": [
+      {
+        "node_id": "n1",
+        "type": "sequence",
+        "children": [
+          {
+            "node_id": "n2",
+            "type": "action",
+            "action": "attack",
+            "condition": { "test": "can_attack", "op": "==", "value": true }
+          }
+        ]
+      },
+      {
+        "node_id": "n3",
+        "type": "sequence",
+        "children": [
+          {
+            "node_id": "n4",
+            "type": "action",
+            "action": "move_to_target",
+            "condition": { "test": "distance_to_target", "op": ">", "value": 900 }
+          },
+          {
+            "node_id": "n5",
+            "type": "action",
+            "action": "wait",
+            "condition": { "test": "can_attack", "op": "==", "value": false }
+          }
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "attack_range_cm": 800,
+    "retreat_distance_cm": 1800,
+    "retreat_health_pct": 0.25
+  }
+}

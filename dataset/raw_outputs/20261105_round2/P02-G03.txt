@@ -1,0 +1,53 @@
+{
+  "schema_version": "2.0",
+  "behavior_id": "retreat_on_low_hp",
+  "behavior_style": "retreating",
+  "source_prompt_id": "P02",
+  "description": "Enemy retreats when health is low, otherwise attacks the player aggressively.",
+  "root": {
+    "node_id": "n0",
+    "type": "selector",
+    "children": [
+      {
+        "node_id": "n1",
+        "type": "sequence",
+        "condition": { "test": "health_percent", "op": "<=", "value": 0.3 },
+        "children": [
+          {
+            "node_id": "n2",
+            "type": "action",
+            "action": "move_away_from_target"
+          },
+          {
+            "node_id": "n3",
+            "type": "action",
+            "action": "wait"
+          }
+        ]
+      },
+      {
+        "node_id": "n4",
+        "type": "sequence",
+        "children": [
+          {
+            "node_id": "n5",
+            "type": "action",
+            "action": "move_to_target",
+            "condition": { "test": "distance_to_target", "op": ">", "value": 600 }
+          },
+          {
+            "node_id": "n6",
+            "type": "action",
+            "action": "attack",
+            "condition": { "test": "distance_to_target", "op": "<=", "value": 1200 }
+          }
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "attack_range_cm": 1200,
+    "retreat_distance_cm": 1800,
+    "retreat_health_pct": 0.3
+  }
+}

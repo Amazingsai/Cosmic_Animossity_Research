@@ -1,0 +1,44 @@
+{
+  "schema_version": "2.0",
+  "behavior_id": "attack_when_ready_chase_else",
+  "behavior_style": "aggressive",
+  "source_prompt_id": "P06",
+  "description": "Enemy attacks when weapon is ready and player is in range, otherwise chases the player.",
+  "root": {
+    "node_id": "n0",
+    "type": "selector",
+    "children": [
+      {
+        "node_id": "n1",
+        "type": "sequence",
+        "children": [
+          {
+            "node_id": "n2",
+            "type": "action",
+            "action": "attack",
+            "condition": {
+              "test": "can_attack",
+              "op": "==",
+              "value": true
+            }
+          }
+        ],
+        "condition": {
+          "test": "distance_to_target",
+          "op": "<=",
+          "value": 1200
+        }
+      },
+      {
+        "node_id": "n3",
+        "type": "action",
+        "action": "move_to_target"
+      }
+    ]
+  },
+  "parameters": {
+    "attack_range_cm": 1200,
+    "retreat_distance_cm": 2000,
+    "retreat_health_pct": 0.2
+  }
+}

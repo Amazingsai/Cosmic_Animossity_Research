@@ -1,0 +1,2 @@
+run_id,sample_id,prompt_id,behavior_style,model,temperature,max_tokens,seed,timestamp_utc,prompt_sha256,raw_sha256,response_model,system_fingerprint,prompt_tokens,completion_tokens,http_status
+20261105_p01_first,P01-G01,P01,aggressive,gpt-4.1,0.7,900,,2026-11-05T22:34:59.234969+00:00,f3dbf8180e41b5fc8a44922d5fd91766c443a68e40d55741f754db29a509e660,c4653417e14e83794f750675743af84ebbe332c7a6d19c02af7adabc0ffdb258,gpt-4.1,,,,401

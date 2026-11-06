@@ -1,0 +1,54 @@
+{
+  "schema_version": "2.0",
+  "behavior_id": "close_range_rusher",
+  "behavior_style": "aggressive",
+  "source_prompt_id": "P01",
+  "description": "Enemy aggressively approaches the player and attacks when within close range.",
+  "root": {
+    "node_id": "n0",
+    "type": "selector",
+    "children": [
+      {
+        "node_id": "n1",
+        "type": "sequence",
+        "children": [
+          {
+            "node_id": "n2",
+            "type": "action",
+            "action": "attack",
+            "condition": {
+              "test": "distance_to_target",
+              "op": "<=",
+              "value": 300
+            }
+          },
+          {
+            "node_id": "n3",
+            "type": "action",
+            "action": "wait",
+            "condition": {
+              "test": "can_attack",
+              "op": "!=",
+              "value": true
+            }
+          }
+        ]
+      },
+      {
+        "node_id": "n4",
+        "type": "action",
+        "action": "move_to_target",
+        "condition": {
+          "test": "distance_to_target",
+          "op": ">",
+          "value": 300
+        }
+      }
+    ]
+  },
+  "parameters": {
+    "attack_range_cm": 300,
+    "retreat_distance_cm": 600,
+    "retreat_health_pct": 0.1
+  }
+}

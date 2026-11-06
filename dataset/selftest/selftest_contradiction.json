@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0",
+  "behavior_id": "selftest_contradiction",
+  "behavior_style": "range_based",
+  "source_prompt_id": "P08",
+  "root": {
+    "node_id": "n0", "type": "selector", "children": [
+      { "node_id": "n1", "type": "sequence",
+        "condition": { "test": "distance_to_target", "op": ">", "value": 800 },
+        "children": [
+          { "node_id": "n2", "type": "sequence",
+            "condition": { "test": "distance_to_target", "op": "<", "value": 300 },
+            "children": [
+              { "node_id": "n3", "type": "action", "action": "move_to_target" },
+              { "node_id": "n4", "type": "action", "action": "wait" } ] } ] },
+      { "node_id": "n5", "type": "action", "action": "attack" }
+    ]
+  },
+  "parameters": { "attack_range_cm": 800, "retreat_distance_cm": 1500, "retreat_health_pct": 0.3 }
+}

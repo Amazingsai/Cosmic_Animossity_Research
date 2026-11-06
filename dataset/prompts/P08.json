@@ -1,0 +1,8 @@
+{
+  "prompt_id": "P08",
+  "behavior_style": "range_based",
+  "prompt": "Make a ranged enemy back away if the player is closer than 300 units, shoot between 300 and 900 units, and approach if farther.",
+  "system_prompt_sha256": "c6b14b9fb64f1ec55dece5a618e5f0c3f9ba5e1b16ce7275db787e605a632fe0",
+  "schema_sha256": "ab40678a6ee5d992d7d7eb48f2d4a078bbc38e58675f33e197486fedab5b5b29",
+  "prompt_sha256": "8149011d4913373a2f374b16eaee655096690231d908cbe34fc1c552b1cae7c2"
+}

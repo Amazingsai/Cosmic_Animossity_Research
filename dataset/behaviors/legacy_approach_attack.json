@@ -1,0 +1,27 @@
+{
+  "schema_version": "2.0",
+  "behavior_id": "legacy_approach_attack",
+  "behavior_style": "aggressive",
+  "source_prompt_id": "P00",
+  "description": "Ported from dataset/outputs/behavior_001_output.json (legacy synthetic demonstration example, NOT an LLM generation). Used to validate the JSON -> Behavior Tree -> gameplay -> CSV pipeline end to end. Excluded from all RQ1 denominators.",
+  "root": {
+    "node_id": "n0",
+    "type": "selector",
+    "children": [
+      {
+        "node_id": "n1",
+        "type": "sequence",
+        "condition": { "test": "distance_to_target", "op": "<=", "value": 500 },
+        "children": [
+          { "node_id": "n2", "type": "action", "action": "attack" }
+        ]
+      },
+      { "node_id": "n3", "type": "action", "action": "move_to_target" }
+    ]
+  },
+  "parameters": {
+    "attack_range_cm": 500,
+    "retreat_distance_cm": 1500,
+    "retreat_health_pct": 0.3
+  }
+}

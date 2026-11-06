@@ -1,0 +1,13 @@
+file,origin,run_id,behavior_id,schema_version,json_valid,structural_valid,actions_valid,logical_status,manual_review,correction_class,finding_codes,findings,auto_corrections
+behavior_001_output.json,synthetic_demo,legacy_fixture,legacy_001,2.0,1,1,1,VALID,0,none,,,
+behavior_002_output.json,synthetic_demo,legacy_fixture,legacy_002,2.0,1,1,1,VALID,0,none,,,
+behavior_003_output.json,synthetic_demo,legacy_fixture,legacy_003,2.0,1,1,1,VALID,0,none,,,
+behavior_004_output.json,synthetic_demo,legacy_fixture,legacy_004,2.0,1,1,1,VALID,0,mapping,, | legacy unsupported actions: move_to_last_known_player_location,
+behavior_005_output.json,synthetic_demo,legacy_fixture,legacy_005,2.0,1,1,1,REVIEW,1,mapping,L5,AMBIGUOUS:L5:attack is not guarded by any distance_to_target condition on its path; weapon range is 5000 cm so it may fire far out of intended range | AMBIGUOUS:L5:attack is not guarded by any distance_to_target condition on its path; weapon range is 5000 cm so it may fire far out of intended range,
+behavior_006_output.json,synthetic_demo,legacy_fixture,legacy_006,2.0,1,1,1,VALID,0,mapping,, | legacy unsupported actions: patrol,
+behavior_007_output.json,synthetic_demo,legacy_fixture,legacy_007,2.0,1,1,1,INVALID,0,mapping,L1,"FAIL:L1:tree does nothing but wait | legacy unsupported actions: continue_combat,dodge",
+behavior_008_output.json,synthetic_demo,legacy_fixture,legacy_008,2.0,1,1,1,VALID,0,mapping,, | legacy unsupported actions: strafe_around_player,
+behavior_009_output.json,synthetic_demo,legacy_fixture,legacy_009,2.0,1,1,1,REVIEW,1,mapping,L3,"AMBIGUOUS:L3:duplicate sibling conditions: shadowing risk only, NOT unreachable (a failing child falls through), manual review required | legacy unsupported actions: reposition",
+behavior_010_output.json,synthetic_demo,legacy_fixture,legacy_010,2.0,1,1,1,REVIEW,1,mapping,L5,AMBIGUOUS:L5:attack is not guarded by any distance_to_target condition on its path; weapon range is 5000 cm so it may fire far out of intended range | legacy unsupported actions: defend,
+behavior_011_output.json,synthetic_demo,legacy_fixture,legacy_011,2.0,1,1,1,REVIEW,1,mapping,L5,AMBIGUOUS:L5:attack is not guarded by any distance_to_target condition on its path; weapon range is 5000 cm so it may fire far out of intended range | legacy unsupported actions: melee_attack,
+behavior_012_output.json,synthetic_demo,legacy_fixture,legacy_012,2.0,1,1,1,VALID,0,mapping,," | legacy unsupported actions: guard_area,return_to_spawn",

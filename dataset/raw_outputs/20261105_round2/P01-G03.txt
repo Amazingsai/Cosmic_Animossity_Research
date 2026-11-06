@@ -1,0 +1,42 @@
+{
+  "schema_version": "2.0",
+  "behavior_id": "close_attack_aggressive",
+  "behavior_style": "aggressive",
+  "source_prompt_id": "P01",
+  "description": "The enemy aggressively closes in on the player and attacks when at close range.",
+  "root": {
+    "node_id": "n0",
+    "type": "selector",
+    "children": [
+      {
+        "node_id": "n1",
+        "type": "sequence",
+        "children": [
+          {
+            "node_id": "n2",
+            "type": "action",
+            "action": "attack",
+            "condition": { "test": "distance_to_target", "op": "<=", "value": 200 }
+          },
+          {
+            "node_id": "n3",
+            "type": "action",
+            "action": "wait",
+            "condition": { "test": "distance_to_target", "op": "<=", "value": 200 }
+          }
+        ]
+      },
+      {
+        "node_id": "n4",
+        "type": "action",
+        "action": "move_to_target",
+        "condition": { "test": "distance_to_target", "op": ">", "value": 200 }
+      }
+    ]
+  },
+  "parameters": {
+    "attack_range_cm": 200,
+    "retreat_distance_cm": 400,
+    "retreat_health_pct": 0.1
+  }
+}

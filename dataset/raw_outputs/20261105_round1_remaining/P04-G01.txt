@@ -1,0 +1,66 @@
+{
+  "schema_version": "2.0",
+  "behavior_id": "range_triad_enemy",
+  "behavior_style": "range_based",
+  "source_prompt_id": "P04",
+  "description": "This enemy chooses distinct tactics at close, medium, and long ranges, attacking up close, advancing at medium range, and closing distance at long range.",
+  "root": {
+    "node_id": "n0",
+    "type": "selector",
+    "children": [
+      {
+        "node_id": "n1",
+        "type": "sequence",
+        "condition": { "test": "distance_to_target", "op": "<", "value": 400 },
+        "children": [
+          {
+            "node_id": "n2",
+            "type": "action",
+            "action": "attack",
+            "condition": { "test": "can_attack", "op": "==", "value": true }
+          },
+          {
+            "node_id": "n3",
+            "type": "action",
+            "action": "wait"
+          }
+        ]
+      },
+      {
+        "node_id": "n4",
+        "type": "sequence",
+        "condition": { "test": "distance_to_target", "op": "<=", "value": 1500 },
+        "children": [
+          {
+            "node_id": "n5",
+            "type": "action",
+            "action": "move_to_target"
+          },
+          {
+            "node_id": "n6",
+            "type": "action",
+            "action": "attack",
+            "condition": { "test": "can_attack", "op": "==", "value": true }
+          }
+        ]
+      },
+      {
+        "node_id": "n7",
+        "type": "sequence",
+        "condition": { "test": "distance_to_target", "op": ">", "value": 1500 },
+        "children": [
+          {
+            "node_id": "n8",
+            "type": "action",
+            "action": "move_to_target"
+          }
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "attack_range_cm": 400,
+    "retreat_distance_cm": 2000,
+    "retreat_health_pct": 0.2
+  }
+}

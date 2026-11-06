@@ -1,0 +1,86 @@
+{
+  "schema_version": "2.0",
+  "behavior_id": "retreat_low_health_hold_dist",
+  "behavior_style": "retreating",
+  "source_prompt_id": "P10",
+  "description": "Enemy retreats when health is below 30 percent, otherwise holds attack range while attacking the player.",
+  "root": {
+    "node_id": "n0",
+    "type": "selector",
+    "children": [
+      {
+        "node_id": "n1",
+        "type": "sequence",
+        "condition": {
+          "test": "health_percent",
+          "op": "<",
+          "value": 0.3
+        },
+        "children": [
+          {
+            "node_id": "n2",
+            "type": "action",
+            "action": "move_away_from_target"
+          },
+          {
+            "node_id": "n3",
+            "type": "action",
+            "action": "wait"
+          }
+        ]
+      },
+      {
+        "node_id": "n4",
+        "type": "selector",
+        "children": [
+          {
+            "node_id": "n5",
+            "type": "action",
+            "action": "move_to_target",
+            "condition": {
+              "test": "distance_to_target",
+              "op": ">",
+              "value": 1200
+            }
+          },
+          {
+            "node_id": "n6",
+            "type": "action",
+            "action": "move_away_from_target",
+            "condition": {
+              "test": "distance_to_target",
+              "op": "<",
+              "value": 900
+            }
+          },
+          {
+            "node_id": "n7",
+            "type": "sequence",
+            "children": [
+              {
+                "node_id": "n8",
+                "type": "action",
+                "action": "attack",
+                "condition": {
+                  "test": "can_attack",
+                  "op": "==",
+                  "value": true
+                }
+              },
+              {
+                "node_id": "n9",
+                "type": "action",
+                "action": "wait"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "attack_range_cm": 1000,
+    "retreat_distance_cm": 1600,
+    "retreat_health_pct": 0.3
+  }
+}

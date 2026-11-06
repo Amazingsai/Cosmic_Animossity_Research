@@ -1,0 +1,23 @@
+{
+  "schema_version": "2.0",
+  "behavior_id": "selftest_duplicate_siblings",
+  "behavior_style": "defensive",
+  "source_prompt_id": "P02",
+  "root": {
+    "node_id": "n0", "type": "selector", "children": [
+      { "node_id": "n1", "type": "sequence",
+        "condition": { "test": "health_percent", "op": "<", "value": 0.3 },
+        "children": [
+          { "node_id": "n2", "type": "action", "action": "move_away_from_target" },
+          { "node_id": "n3", "type": "action", "action": "wait" } ] },
+      { "node_id": "n4", "type": "sequence",
+        "condition": { "test": "health_percent", "op": "<", "value": 0.3 },
+        "children": [
+          { "node_id": "n5", "type": "action", "action": "move_to_target" },
+          { "node_id": "n6", "type": "action", "action": "wait" } ] },
+      { "node_id": "n7", "type": "action", "action": "attack",
+        "condition": { "test": "distance_to_target", "op": "<=", "value": 800 } }
+    ]
+  },
+  "parameters": { "attack_range_cm": 800, "retreat_distance_cm": 1500, "retreat_health_pct": 0.3 }
+}

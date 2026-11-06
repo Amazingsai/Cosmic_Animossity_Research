@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cosmic-animosity.local/behavior_schema_v2.json",
+  "title": "Cosmic Animosity Enemy Behavior Tree (schema v2)",
+  "description": "Behaviour-tree interchange format for the LLM behaviour-generation experiment. A tree is a recursive structure of selector/sequence nodes containing action nodes; each non-root node may carry at most one condition.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "behavior_id", "behavior_style", "root", "parameters"],
+  "properties": {
+    "schema_version": { "const": "2.0" },
+    "behavior_id": { "type": "string", "pattern": "^[a-z0-9_]{3,32}$" },
+    "behavior_style": {
+      "enum": ["aggressive", "defensive", "tactical", "range_based", "retreating"]
+    },
+    "source_prompt_id": { "type": "string", "pattern": "^P[0-9]{2}$" },
+    "description": { "type": "string", "maxLength": 400 },
+    "root": { "$ref": "#/definitions/structure_node" },
+    "parameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["attack_range_cm", "retreat_distance_cm", "retreat_health_pct"],
+      "properties": {
+        "attack_range_cm": { "type": "number", "minimum": 100, "maximum": 4000 },
+        "retreat_distance_cm": { "type": "number", "minimum": 100, "maximum": 4000 },
+        "retreat_health_pct": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
+      }
+    }
+  },
+  "definitions": {
+    "node_id": { "type": "string", "pattern": "^n[0-9]{1,2}$" },
+    "condition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["test", "op", "value"],
+      "description": "Supported tests: distance_to_target (cm, 0-10000), health_percent (0-1), can_attack (bool). Operators: < <= > >= for numeric tests, == != for can_attack.",
+      "properties": {
+        "test": { "enum": ["distance_to_target", "health_percent", "can_attack"] },
+        "op": { "enum": ["<", "<=", ">", ">=", "==", "!="] },
+        "value": { "type": ["number", "boolean"] }
+      }
+    },
+    "action_node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["node_id", "type", "action"],
+      "properties": {
+        "node_id": { "$ref": "#/definitions/node_id" },
+        "type": { "const": "action" },
+        "action": {
+          "enum": ["move_to_target", "move_away_from_target", "attack", "wait"]
+        },
+        "wait_seconds": { "type": "number", "minimum": 0.1, "maximum": 3.0 },
+        "condition": { "$ref": "#/definitions/condition" }
+      }
+    },
+    "structure_node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["node_id", "type", "children"],
+      "properties": {
+        "node_id": { "$ref": "#/definitions/node_id" },
+        "type": { "enum": ["selector", "sequence"] },
+        "condition": { "$ref": "#/definitions/condition" },
+        "children": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 5,
+          "items": {
+            "anyOf": [
+              { "$ref": "#/definitions/action_node" },
+              { "$ref": "#/definitions/structure_node" }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": "2.0",
+  "behavior_id": "keep_distance_attack",
+  "behavior_style": "range_based",
+  "source_prompt_id": "P03",
+  "description": "Enemy maintains a preferred distance from the player and attacks when within optimal range.",
+  "root": {
+    "node_id": "n0",
+    "type": "selector",
+    "children": [
+      {
+        "node_id": "n1",
+        "type": "sequence",
+        "children": [
+          {
+            "node_id": "n2",
+            "type": "action",
+            "action": "move_away_from_target",
+            "condition": {
+              "test": "distance_to_target",
+              "op": "<",
+              "value": 800
+            }
+          },
+          {
+            "node_id": "n3",
+            "type": "action",
+            "action": "wait"
+          }
+        ]
+      },
+      {
+        "node_id": "n4",
+        "type": "sequence",
+        "children": [
+          {
+            "node_id": "n5",
+            "type": "action",
+            "action": "move_to_target",
+            "condition": {
+              "test": "distance_to_target",
+              "op": ">",
+              "value": 1200
+            }
+          },
+          {
+            "node_id": "n6",
+            "type": "action",
+            "action": "wait"
+          }
+        ]
+      },
+      {
+        "node_id": "n7",
+        "type": "sequence",
+        "children": [
+          {
+            "node_id": "n8",
+            "type": "action",
+            "action": "attack",
+            "condition": {
+              "test": "distance_to_target",
+              "op": ">=",
+              "value": 800
+            }
+          },
+          {
+            "node_id": "n9",
+            "type": "action",
+            "action": "attack",
+            "condition": {
+              "test": "distance_to_target",
+              "op": "<=",
+              "value": 1200
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "attack_range_cm": 1000,
+    "retreat_distance_cm": 1400,
+    "retreat_health_pct": 0.2
+  }
+}
