@@ -896,6 +896,140 @@ denominator is computed.
 
 ---
 
+### Phase 6 — Primary dataset complete: combined validation of N=40 (analysis only)
+
+#### The dataset
+
+| Run | Samples | Status |
+|---|---|---|
+| `20261105_round1_remaining` | 10 (`P01-G01` … `P10-G01`) | HTTP 200, sha256 verified |
+| `20261105_round2` | 30 (`P01-G01` … `P10-G03`) | HTTP 200, sha256 verified |
+| **Experimental total** | **40** = 10 prompts × 4 generations | **complete** |
+
+`scripts/combine_validation.py` reads `results/validation_round1.csv` and
+`results/validation_round2.csv` (neither is modified) and writes `results/validation_combined.csv`
+(40 rows, same 14 columns plus a derived `sample_id`).
+
+Provenance is re-derived from disk rather than trusted from the CSVs: every scored row has exactly one
+manifest row for its `sample_id`, every recorded `http_status` is 200, and every `raw_sha256` equals the
+sha256 recomputed from the file as it exists now. The `.txt` inventory of both run directories equals the
+scored set exactly, so no sample is counted twice or missed. Round CSVs hash `ba199d65…` and `ee06fa9c…`
+before and after the combine — unchanged.
+
+**The pilot is not part of N=40.** `20261105_p01_success/P01-G01` (Phase 5D) and its row in
+`results/generation_validation.csv` are a pilot and stay out of every denominator.
+**`sample_id` is unique only within a run**: `P01-G01` exists in three directories and they are three
+different responses, so every key is `(run_id, sample_id)`.
+
+#### Combined M1–M5
+
+```
+M1 JSON valid         40/40 (100.0%)
+M2 structural valid   26/40 ( 65.0%)
+M3 actions valid      40/40 (100.0%)
+M4 logically valid    12/40 ( 30.0%)   manual review 14
+M5 needs correction   28/40 ( 70.0%)   logic 14  mapping 14
+
+VALID   12 (30.0%)      REVIEW  14 (35.0%)      INVALID 14 (35.0%)
+```
+
+| Code | Severity | Rows | Meaning |
+|---|---|---|---|
+| `L5` | AMBIGUOUS | 18 | attack has no `distance_to_target` condition on its path |
+| `S1` | FAIL | 10 | composite with exactly 1 child |
+| `S3` | WARN | 10 | companion warning to every `S1` |
+| `S5` | FAIL | 6 | `retreat_distance_cm` ≤ `attack_range_cm` |
+| `L8` | WARN | 4 | attack threshold differs from `attack_range_cm` by >200 cm |
+| `L3` | AMBIGUOUS | 2 | duplicate sibling conditions |
+
+No `M1`, `A1`, `A2`, `L1`, `L2`, `L4`, `L6` or `L7` finding occurred in any of the 40. M2 fails on
+exactly the 14 INVALID rows, because every structural code here (`S1`, `S5`) is also a FAIL.
+
+#### 14 manual-review cases is not the same as 20 ambiguous flags
+
+`manual_review = 1` is set on **20** rows: the **14 `REVIEW`** trees, plus **6 `INVALID`** trees that also
+carry a secondary AMBIGUOUS finding (all six are `L5` on a tree already failed for `S1`/`S5`). Only the 14
+`REVIEW` rows await a human decision; the other 6 are confirmed invalid.
+
+| Class | n | Composition |
+|---|---|---|
+| `VALID` | 12 | no FAIL, no AMBIGUOUS (one of the 12 also carries an `L8` WARN) |
+| `REVIEW` | 14 | `L5` ×12, `L3` ×2 |
+| `INVALID` | 14 | `S5`-bearing ×6, `S1`-only ×3, `S1`+`L5` ×5 |
+
+| Sample | VALID | REVIEW | INVALID |
+|---|---|---|---|
+| P01 | G01 (r2) | r1-G01, r2-G02, r2-G03 | — |
+| P02 | r2-G01, G02, G03 | r1-G01 | — |
+| P03 | r1-G01, r2-G01, r2-G03 | r2-G02 | — |
+| P04 | r2-G01, G02, G03 | — | r1-G01 |
+| P05 | — | all four | — |
+| P06 | — | r2-G01, r2-G03 | r1-G01, r2-G02 |
+| P07 | r2-G01, G02 | — | r1-G01, r2-G03 |
+| P08 | — | — | all four |
+| P09 | — | — | all four |
+| P10 | — | r1-G01, r2-G01, r2-G02 | r2-G03 |
+
+#### Failure categories, largest first
+
+1. **Unguarded attack — `L5`, 18 rows (45%).** The single most common weakness and the only one that never
+   fails a tree on its own. The model gives `attack` a `can_attack` guard but no distance guard, so the
+   documented worst case is a shot from 5000 cm.
+2. **Structural degeneracy — `S1`/`S3`, 10 rows.** A composite with exactly one child. Concentrated in
+   P09 (4/4): "alternate between attacking and repositioning" collapses to
+   `selector[ sequence[ attack ] , selector[ … ] ]`. Harmless in engine (it executes as its child) but a
+   schema violation.
+3. **Parameter-order inversion — `S5`, 6 rows.** **Every one is a P07 or P08 sample, and P08 is 4/4
+   invalid.** This is prompt-induced, not model noise: P08's prompt says "back away if the player is
+   closer than 300 units, shoot between 300 and 900", and the literal encoding is `retreat=300,
+   attack=900`, which S5 forbids by construction. The prompt's vocabulary (a *trigger* distance, below
+   attack range) and the schema's field (a retreat *goal*, required above attack range) disagree, so any
+   literal reading fails. P04 — the same three-band idea without explicit numbers — scores 3/4 valid.
+4. **Duplicate sibling conditions — `L3`, 2 rows.** P01-G02/G03 gate both the `attack` and the `wait` on
+   the identical `d <= X`; P01-G01 gates the wait on `can_attack != true` instead and is VALID. The pattern
+   is a habit, and one sample per prompt escapes it.
+5. **Threshold divergence — `L8`, 4 rows (WARN).** Round1 P03-G01 and round2 P07-G03/P08-G01/P08-G03.
+
+#### Two observations outside the rule set
+
+- **Self-reported style drifts from the prompt.** 13/40 documents declare a `behavior_style` different from
+  their prompt's frozen style — P02 → `retreating` (4/4), P03 → `range_based` (4/4), P07 → `range_based`
+  (3/4), P10-G03 → `range_based` — while `source_prompt_id` is correct in 40/40. The validator accepts any
+  of the five values, so no score changes; but any style-conditioned analysis must group by prompt id, not
+  by the model's own label.
+- **`wait` is never given a duration.** 0/40 documents use `wait_seconds` although the schema allows
+  0.1–3.0. `BTTask_Wait` exposes `WaitTime` as an `FValueOrBBKey_Float`, so every faithful implementation
+  must pick a duration the JSON does not specify.
+
+#### What can be implemented faithfully
+
+Action coverage is complete: `M3 = 40/40`, so every tree uses only the four supported actions.
+
+| Schema element | Existing asset | Note |
+|---|---|---|
+| `selector` / `sequence` | native BT Selector / Sequence | free |
+| `move_to_target` | `BTTask_EnemyMoveToTarget` | `AcceptanceRadius` must sit ~150 cm below the attack threshold (Phase 5A overshoot) |
+| `move_away_from_target` | `BTTask_EnemyMoveAwayFromTarget` | `RetreatDistance`; returns FAILURE when already beyond range (Phase 5B) |
+| `attack` | `BTTask_EnemyAttack` | `AttackRange`; also refuses to fire past its own gate (Phase 4) |
+| `wait` | native `BTTask_Wait` | `WaitTime` is a value-or-blackboard-key float; JSON supplies no duration |
+| `distance_to_target` | `BTDecorator_Blackboard` | Float key `DistanceToTarget` |
+| `health_percent` | `BTDecorator_Blackboard` | Float key `HealthPercent` (0–1, written every 0.1 s) |
+| `can_attack` | `BTDecorator_Blackboard` | Bool key `CanAttack` |
+
+So all 40 are *mechanically* expressible. What differs is fidelity:
+
+- **Faithful with no interpretation:** the 12 VALID trees and the 2 `L3` REVIEW trees — every condition
+  maps to a native decorator and every parameter to a node property.
+- **Faithful after unwrapping:** the 8 `S1` trees need their single-child composite collapsed, which is
+  behaviour-preserving in UE.
+- **Not translatable as written:** the 6 `S5` trees. Their two parameters contradict each other, so one
+  number must be overridden — that is an interpretation, not a translation.
+- **`L5` is partly masked in engine.** `BTTask_EnemyAttack` refuses to fire beyond its own `AttackRange`,
+  so an unguarded attack node still behaves bounded if `AttackRange` is written from `attack_range_cm`.
+  Never cite that gate as evidence the tree's own condition executed.
+
+---
+
 ## 6. Current state of the two enemies
 
 ### `BP_AICharacter` — control group, UNMODIFIED
@@ -989,8 +1123,12 @@ can honour `PendingTrialIndex`. Left unchanged this session.
 | `scripts/validate_behaviors.py` | Working; M1–M5, `--fixtures` mode, severity map above. **Phase 5D:** `iter_json_files` matches `RAW_SUFFIXES = (".json", ".txt")`, so raw LLM outputs are scored. **Phase 5E:** zero documents is a hard error — exit 2 and nothing written |
 | `scripts/generate_behaviors.py` | Working and **run with a real key for the first time in Phase 5D** (`--prompt-id P01 --n 1`). Holds the 10 frozen prompts (P01–P10); `--export-prompts` wrote `dataset/prompts/P01..P10.json`; writes samples as `<sample_id>.txt`. **Phase 5E:** `run_dir_conflicts()` refuses a reused run id (exit 2) before the key check and before any write |
 | `tests/test_dataset_integrity.py` | **Phase 5E** regression suite — 15 stdlib `unittest` tests covering both guards. Runs each CLI as a subprocess in a temp directory with `OPENAI_API_KEY` stripped. `python -m unittest discover -s tests -v` |
+| `scripts/combine_validation.py` | **Phase 6** — combines the round CSVs into one 40-row table and re-verifies every row against its manifest and the file's sha256. Writes `results/validation_combined.csv`; prints M1–M5, status, code and per-prompt breakdowns |
 | `scripts/analyze_results.py` | Written; **has never parsed a live `TRIALDATA` line** |
-| `results/generation_validation.csv` | **Now populated from authentic LLM data** (N=1, run `20261105_p01_success`). This overwrote the previous fixture-derived contents; regenerate fixtures with `--legacy-fixtures` into `results/validator_fixtures_synthetic.csv` if both are wanted |
+| `results/generation_validation.csv` | Pilot only — the single Phase 5D sample (`20261105_p01_success/P01-G01`). **Not part of N=40** |
+| `results/validation_round1.csv` | 10 rows (round 1). Input to the combiner; never modified |
+| `results/validation_round2.csv` | 30 rows (round 2). Input to the combiner; never modified |
+| `results/validation_combined.csv` | **The N=40 table** — 40 rows, same 14 columns plus `sample_id`. Derived; regenerate with `scripts/combine_validation.py` |
 | `results/validator_fixtures_synthetic.csv` | Populated from fixtures (not authentic) |
 | `Content/Python/aura_pie_probe.py` | Phase 5A PIE probe: two distance phases, blackboard/geometric distance, shots, damage, positions. Writes `Saved/aura_pie_probe_report.txt` |
 | `Content/Python/aura_retreat_probe.py` | Phase 5B PIE probe: one close-start phase, teleports the player to 300 cm, swaps the tree with `RunBehaviorTree`, records distance, move status and positions. Writes `Saved/aura_retreat_probe_report.txt` |
