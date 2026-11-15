@@ -1,0 +1,19 @@
+run_id=p7cmp_p01g2_r1 subject=generated
+phase_rows=12 damage_events=55 samples=4639 done=True
+started_at=2026.11.14-23.02.08 finished_at=2026.11.14-23.03.27
+level_prep: editor level armed with the placed experimental enemy
+subject_health_at_start=500.0 max=500.0
+player_health_at_start=200.0
+subject=generated tree=/Game/Research/AI/BT_Behavior_P01_G02.BT_Behavior_P01_G02 player_z=98.2
+trial1 far_1500 requested=1500 health_start=100000.0
+trial1 mid_600 requested=600 health_start=99975.0
+trial1 close_200 requested=200 health_start=99950.0
+trial1 far_1500_again requested=1500 health_start=99920.0
+trial2 far_1500 requested=1500 health_start=99905.0
+trial2 mid_600 requested=600 health_start=99880.0
+trial2 close_200 requested=200 health_start=99855.0
+trial2 far_1500_again requested=1500 health_start=99830.0
+trial3 far_1500 requested=1500 health_start=99815.0
+trial3 mid_600 requested=600 health_start=99790.0
+trial3 close_200 requested=200 health_start=99765.0
+trial3 far_1500_again requested=1500 health_start=99740.0

@@ -1,0 +1,6 @@
+run_id=p7p04_probe
+phase_rows=4 samples=105 done=True
+started_at=2026.11.14-21.30.30 finished_at=2026.11.14-21.31.07
+player_health_at_start=200.0
+subject=generated tree=/Game/Research/AI/BT_Behavior_P04_G01.BT_Behavior_P04_G01
+enemy_health_start=500.0 max=500.0

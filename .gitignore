@@ -14,3 +14,11 @@ Saved/
 # Python cache files
 __pycache__/
 *.pyc
+
+# Local Aura files
+.Aura/
+
+# Local credentials
+.env
+.env.*
+!.env.example

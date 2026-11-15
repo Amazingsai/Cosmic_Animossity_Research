@@ -1,0 +1,8 @@
+started_at=2026.11.14-23.47.43 finished_at=2026.11.14-23.47.58
+phases=['far_1500', 'close_200']
+samples=41
+phase_row=['far_1500', '1500', '6.0', 18, 18, 0, '0.0', '600.0']
+phase_row=['close_200', '200', '8.0', 23, 23, 0, '0.0', '600.0']
+player_health_at_start=200.0
+tree_reported_by_controller=/Game/Research/AI/BT_Test_Decorator_Guard250.BT_Test_Decorator_Guard250
+brain_component=BehaviorTreeComponent

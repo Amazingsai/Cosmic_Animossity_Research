@@ -1,0 +1,6 @@
+run_id=p7p07_control_attackrange10000
+phase_rows=4 events=11 samples=94 done=True
+started_at=2026.11.14-21.57.57 finished_at=2026.11.14-21.58.30
+player_health_at_start=200.0
+subject=generated tree=/Game/Research/AI/BT_Behavior_P07_G01.BT_Behavior_P07_G01
+enemy_health_start=500.0 max=500.0

@@ -1,0 +1,13 @@
+candidate_no,run_id,subject,mean_sample_rate_hz,mean_interval_s,first_damage_resolution_s,damage_events,damage_total,damage_total_equals_events_x_5,within_session_latency_valid,cross_candidate_latency_comparable,metrics_usable,note
+1,p7cmp_r1,generated,2.93,0.342,0.342,36,180.0,yes,yes,yes - within the five phases measured at ~2.9 Hz,"event counts, damage totals, within-session latency",per-phase summary schema; no reaction_correctness column in the source file
+1,p7cmp_r1,baseline,2.93,0.342,0.342,67,335.0,yes,yes,yes - within the five phases measured at ~2.9 Hz,"event counts, damage totals, within-session latency",per-phase summary schema; no reaction_correctness column in the source file
+2,p7cmp_p02_r1,generated,2.91,0.344,0.344,0,0.0,yes,yes,yes - within the five phases measured at ~2.9 Hz,"event counts, damage totals, within-session latency",
+2,p7cmp_p02_r1,baseline,2.93,0.341,0.341,68,340.0,yes,yes,yes - within the five phases measured at ~2.9 Hz,"event counts, damage totals, within-session latency",
+3,p7cmp_p04_r1,generated,2.89,0.346,0.346,35,175.0,yes,yes,yes - within the five phases measured at ~2.9 Hz,"event counts, damage totals, within-session latency",
+3,p7cmp_p04_r1,baseline,2.92,0.342,0.342,64,320.0,yes,yes,yes - within the five phases measured at ~2.9 Hz,"event counts, damage totals, within-session latency",
+6,p7cmp_p07_r1,generated,2.93,0.341,0.341,0,0.0,yes,yes,yes - within the five phases measured at ~2.9 Hz,"event counts, damage totals, within-session latency",
+6,p7cmp_p07_r1,baseline,2.92,0.342,0.342,64,320.0,yes,yes,yes - within the five phases measured at ~2.9 Hz,"event counts, damage totals, within-session latency",
+5,p7cmp_p03g2_r1,generated,2.91,0.344,0.344,0,0.0,yes,yes,yes - within the five phases measured at ~2.9 Hz,"event counts, damage totals, within-session latency",
+5,p7cmp_p03g2_r1,baseline,2.91,0.344,0.344,66,330.0,yes,yes,yes - within the five phases measured at ~2.9 Hz,"event counts, damage totals, within-session latency",
+4,p7cmp_p01g2_r1,generated,59.48,0.017,0.017,55,275.0,yes,yes,no - only phase measured at ~59 Hz; not comparable with the five ~2.9 Hz phases,"event counts, damage totals, sub-0.1 s within-session latency",PIE ran unthrottled for this phase only
+4,p7cmp_p01g2_r1,baseline,58.65,0.017,0.017,77,385.0,yes,yes,no - only phase measured at ~59 Hz; not comparable with the five ~2.9 Hz phases,"event counts, damage totals, sub-0.1 s within-session latency",PIE ran unthrottled for this phase only

@@ -1,0 +1,15 @@
+run_id,subject,task_line_prefix,count
+p7cmp_p02_r1,generated,BTTask_EnemyMoveToTarget: SUCCESS,6
+p7cmp_p02_r1,generated,BTTask_EnemyMoveToTarget: FAILURE (arrived too far),0
+p7cmp_p02_r1,generated,BTTask_EnemyMoveToTarget: FAILURE,0
+p7cmp_p02_r1,generated,BTTask_EnemyMoveAwayFromTarget: SUCCESS,0
+p7cmp_p02_r1,generated,BTTask_EnemyMoveAwayFromTarget: FAILURE,1
+p7cmp_p02_r1,generated,BTTask_EnemyAttack: out of range - FAILURE,0
+p7cmp_p02_r1,generated,BTTask_EnemyAttack:,0
+p7cmp_p02_r1,baseline,BTTask_EnemyMoveToTarget: SUCCESS,0
+p7cmp_p02_r1,baseline,BTTask_EnemyMoveToTarget: FAILURE (arrived too far),0
+p7cmp_p02_r1,baseline,BTTask_EnemyMoveToTarget: FAILURE,0
+p7cmp_p02_r1,baseline,BTTask_EnemyMoveAwayFromTarget: SUCCESS,0
+p7cmp_p02_r1,baseline,BTTask_EnemyMoveAwayFromTarget: FAILURE,0
+p7cmp_p02_r1,baseline,BTTask_EnemyAttack: out of range - FAILURE,0
+p7cmp_p02_r1,baseline,BTTask_EnemyAttack:,0

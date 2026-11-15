@@ -1,0 +1,13 @@
+run_id,subject,tree,trial,phase,requested_cm,duration_s,samples,sample_rate_hz,damage_events,damage_total,health_at_phase_start,max_geo_at_damage_cm,min_geo_at_damage_cm,max_bb_at_damage_cm,first_damage_s,subject_moved_cm,subject_start_y,subject_end_y,enemy_health_start,enemy_health_end,bb_health_percent_min,bb_health_percent_max
+p7cmp_p04_r1,baseline,unreadable,1,far_1500,1500,8.0,24,3.0,7,35.0,100000.0,1042.7,69.3,-1.0,0.692,1447.9,600.0,-847.2,500.0,500.0,,
+p7cmp_p04_r1,baseline,unreadable,1,mid_600,600,6.0,17,2.8,5,25.0,99960.0,316.3,69.7,-1.0,1.014,578.9,600.0,24.8,500.0,500.0,,
+p7cmp_p04_r1,baseline,unreadable,1,close_200,200,6.0,17,2.8,5,25.0,99930.0,82.1,82.1,-1.0,1.012,117.9,600.0,482.1,500.0,500.0,,
+p7cmp_p04_r1,baseline,unreadable,1,far_1500_again,1500,6.0,18,3.0,5,25.0,99900.0,1092.5,104.2,-1.0,1.316,1399.9,600.0,-799.6,500.0,500.0,,
+p7cmp_p04_r1,baseline,unreadable,2,far_1500,1500,8.0,24,3.0,7,35.0,99870.0,882.5,69.0,-1.0,1.656,1445.6,600.0,-845.0,500.0,500.0,,
+p7cmp_p04_r1,baseline,unreadable,2,mid_600,600,6.0,17,2.8,4,20.0,99835.0,69.7,69.7,-1.0,1.670,578.9,600.0,24.8,500.0,500.0,,
+p7cmp_p04_r1,baseline,unreadable,2,close_200,200,6.0,18,3.0,6,30.0,99805.0,82.1,82.1,-1.0,0.992,117.9,600.0,482.1,500.0,500.0,,
+p7cmp_p04_r1,baseline,unreadable,2,far_1500_again,1500,6.0,18,3.0,5,25.0,99775.0,1259.2,101.0,-1.0,1.000,1405.2,600.0,-804.8,500.0,500.0,,
+p7cmp_p04_r1,baseline,unreadable,3,far_1500,1500,8.0,24,3.0,6,30.0,99745.0,1049.0,68.8,-1.0,1.340,1443.0,600.0,-842.5,500.0,500.0,,
+p7cmp_p04_r1,baseline,unreadable,3,mid_600,600,6.0,17,2.8,5,25.0,99710.0,151.7,69.7,-1.0,1.337,579.5,600.0,24.2,500.0,500.0,,
+p7cmp_p04_r1,baseline,unreadable,3,close_200,200,6.0,18,3.0,5,25.0,99685.0,81.7,81.7,-1.0,1.346,118.3,600.0,481.7,500.0,500.0,,
+p7cmp_p04_r1,baseline,unreadable,3,far_1500_again,1500,6.0,17,2.8,4,20.0,99655.0,1092.7,104.4,-1.0,1.327,1399.8,600.0,-799.5,500.0,500.0,,

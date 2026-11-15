@@ -1,0 +1,20 @@
+run_id=p7p02_probe
+phase_rows=8 samples=236 done=True
+finished_at=2026.11.14-20.36.31
+started_at=2026.11.14-20.35.09
+tree=/Game/Research/AI/BT_Behavior_P02_G01.BT_Behavior_P02_G01
+enemy_spawn=(0.0,600.0,90.2)
+player_health_at_start=200.0
+enemy_max_health=500.0
+trial1 healthy_600 requested=600 enemy_health_set=500.0 (HealthPercent=1.00)
+health stimulus: SendDamage(400.0) -> CurrentHealth 100.0
+trial1 wounded_600 requested=600 enemy_health_set=100.0 (HealthPercent=0.20)
+trial1 wounded_1500 requested=1500 enemy_health_set=100.0 (HealthPercent=0.20)
+health stimulus: SendDamage(-400.0) -> CurrentHealth 500.0
+trial1 healthy_1500 requested=1500 enemy_health_set=500.0 (HealthPercent=1.00)
+trial2 healthy_600 requested=600 enemy_health_set=500.0 (HealthPercent=1.00)
+health stimulus: SendDamage(400.0) -> CurrentHealth 100.0
+trial2 wounded_600 requested=600 enemy_health_set=100.0 (HealthPercent=0.20)
+trial2 wounded_1500 requested=1500 enemy_health_set=100.0 (HealthPercent=0.20)
+health stimulus: SendDamage(-400.0) -> CurrentHealth 500.0
+trial2 healthy_1500 requested=1500 enemy_health_set=500.0 (HealthPercent=1.00)

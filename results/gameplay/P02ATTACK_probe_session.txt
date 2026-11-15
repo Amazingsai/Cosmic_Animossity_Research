@@ -1,0 +1,5 @@
+run_id=p7p02_attackprobe samples=42 done=True
+finished_at=2026.11.14-20.38.47
+started_at=2026.11.14-20.38.32
+tree=/Game/Research/AI/BT_Behavior_P02_G01.BT_Behavior_P02_G01
+player_health=100000.0

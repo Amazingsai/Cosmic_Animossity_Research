@@ -1,0 +1,13 @@
+run_id=p7p03g2_probe3
+phase_rows=4 events=0 samples=94 done=True
+started_at=2026.11.14-22.27.23 finished_at=2026.11.14-22.27.56
+enemy_weapon=BP_WeaponBase_C
+weapon_Damage=5.0
+weapon_FireRate=1.0
+weapon_Range=5000.0
+weapon_Accuracy=0.6000000238418579
+weapon_BulletSpeed=2500.0
+player_health_at_start=200.0
+subject=generated tree=/Game/Research/AI/BT_Behavior_P03_G02.BT_Behavior_P03_G02
+projectile_class=BP_Projectile_C
+enemy_health_start=500.0 max=500.0

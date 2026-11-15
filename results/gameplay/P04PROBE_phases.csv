@@ -1,0 +1,5 @@
+run_id,phase,requested_cm,duration_s,samples,sample_rate_hz,damage_events,damage_total,max_geo_at_damage_cm,min_geo_at_damage_cm,first_damage_s,enemy_moved_cm,enemy_start_y,enemy_end_y,bb_dist_min,bb_dist_max
+p7p04_probe,close_200,200,8.0,24,3.0,5,25.0,200.2,200.2,0.848,0.0,600.0,600.0,200.2,200.2
+p7p04_probe,mid_600,600,8.0,23,2.9,6,30.0,600.1,600.1,0.667,0.0,600.0,600.0,600.1,600.1
+p7p04_probe,far_1800,1800,12.0,35,2.9,5,25.0,1348.6,1348.6,2.668,451.6,600.0,148.5,1348.6,1800.0
+p7p04_probe,close_200_again,200,8.0,23,2.9,5,25.0,200.2,200.2,1.000,0.0,600.0,600.0,200.2,200.2

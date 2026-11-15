@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="500" viewBox="0 0 940 500">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="40.0" y="36.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="start" fill="#1f2933">Observed problems by attributed cause</text>
+<text x="40.0" y="56.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#6b7280">N = 20 findings from failure_attribution.csv. A finding is attributed to the layer that produced it, not to the layer that reported it.</text>
+<text x="236.0" y="115.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#1f2933">generated logic</text>
+<rect x="250.0" y="96.0" width="500.0" height="30.0" rx="0" fill="#7b68ee" stroke="none" opacity="1.00"/>
+<text x="758.0" y="115.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="start" fill="#6b7280">5</text>
+<text x="236.0" y="157.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#1f2933">instrumentation</text>
+<rect x="250.0" y="138.0" width="500.0" height="30.0" rx="0" fill="#6b7280" stroke="none" opacity="1.00"/>
+<text x="758.0" y="157.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="start" fill="#6b7280">5</text>
+<text x="236.0" y="199.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#1f2933">engine task behaviour</text>
+<rect x="250.0" y="180.0" width="300.0" height="30.0" rx="0" fill="#4a90e2" stroke="none" opacity="1.00"/>
+<text x="558.0" y="199.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="start" fill="#6b7280">3</text>
+<text x="236.0" y="241.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#1f2933">metric definition</text>
+<rect x="250.0" y="222.0" width="200.0" height="30.0" rx="0" fill="#d15858" stroke="none" opacity="1.00"/>
+<text x="458.0" y="241.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="start" fill="#6b7280">2</text>
+<text x="236.0" y="283.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#1f2933">scope limitation</text>
+<rect x="250.0" y="264.0" width="200.0" height="30.0" rx="0" fill="#dfe3e8" stroke="none" opacity="1.00"/>
+<text x="458.0" y="283.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="start" fill="#6b7280">2</text>
+<text x="236.0" y="325.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#1f2933">compiled asset discrepancy</text>
+<rect x="250.0" y="306.0" width="100.0" height="30.0" rx="0" fill="#b87700" stroke="none" opacity="1.00"/>
+<text x="358.0" y="325.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="start" fill="#6b7280">1</text>
+<text x="236.0" y="367.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#1f2933">none</text>
+<rect x="250.0" y="348.0" width="100.0" height="30.0" rx="0" fill="#41a161" stroke="none" opacity="1.00"/>
+<text x="358.0" y="367.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="start" fill="#6b7280">1</text>
+<text x="236.0" y="409.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#1f2933">unattributed</text>
+<rect x="250.0" y="390.0" width="100.0" height="30.0" rx="0" fill="#dfe3e8" stroke="none" opacity="1.00"/>
+<text x="358.0" y="409.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="start" fill="#6b7280">1</text>
+<line x1="250.0" y1="432.0" x2="250.0" y2="432.0" stroke="#9aa5b1" stroke-width="1.0"/>
+</svg>

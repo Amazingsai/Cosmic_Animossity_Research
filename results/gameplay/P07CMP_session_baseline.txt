@@ -1,0 +1,20 @@
+run_id=p7cmp_p07_r1 subject=baseline
+phase_rows=12 damage_events=64 samples=229 done=True
+started_at=2026.11.14-22.04.13 finished_at=2026.11.14-22.05.34
+level_prep: editor level armed with BP_AICharacter only
+WARNING baseline reports a behaviour tree: unreadable
+baseline_weapon_spawned=True
+player_health_at_start=200.0
+subject=baseline tree=unreadable player_z=98.2
+trial1 far_1500 requested=1500 health_start=100000.0
+trial1 mid_600 requested=600 health_start=99960.0
+trial1 close_200 requested=200 health_start=99935.0
+trial1 far_1500_again requested=1500 health_start=99905.0
+trial2 far_1500 requested=1500 health_start=99875.0
+trial2 mid_600 requested=600 health_start=99840.0
+trial2 close_200 requested=200 health_start=99810.0
+trial2 far_1500_again requested=1500 health_start=99785.0
+trial3 far_1500 requested=1500 health_start=99760.0
+trial3 mid_600 requested=600 health_start=99725.0
+trial3 close_200 requested=200 health_start=99700.0
+trial3 far_1500_again requested=1500 health_start=99670.0

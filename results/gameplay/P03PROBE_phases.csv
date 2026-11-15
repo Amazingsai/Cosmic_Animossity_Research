@@ -1,0 +1,5 @@
+run_id,phase,requested_cm,duration_s,samples,sample_rate_hz,damage_events,damage_total,max_geo_at_damage_cm,min_geo_at_damage_cm,first_damage_s,enemy_moved_cm,enemy_start_y,enemy_end_y,enemy_end_geo_cm,end_in_dead_band,bb_dist_min,bb_dist_max,retreat_goal_x,retreat_goal_y,retreat_goal_inside_navmesh
+p7p03g2_probe,far_1500,1500,8.0,24,3.0,0,0.0,-1.0,-1.0,-1.000,835.3,600.0,1434.2,2334.6,0,882.5,2334.6,0.0,2100.0,False
+p7p03g2_probe,mid_600,600,8.0,23,2.9,0,0.0,-1.0,-1.0,-1.000,0.0,600.0,600.0,600.1,0,600.1,600.1,0.0,2099.9,False
+p7p03g2_probe,close_200,200,8.0,23,2.9,0,0.0,-1.0,-1.0,-1.000,0.0,600.0,600.0,200.2,0,200.2,200.2,0.0,2098.8,False
+p7p03g2_probe,far_1500_again,1500,8.0,24,3.0,0,0.0,-1.0,-1.0,-1.000,834.1,600.0,1433.0,2333.4,0,882.2,2333.4,0.0,2100.0,False

@@ -1,0 +1,16 @@
+run_id=p7cmp_r1 subject=generated
+phase_rows=12 damage_events=36 done=True
+player_health_at_start=200.0
+subject=generated tree=/Game/Research/AI/BT_Behavior_P01_G01.BT_Behavior_P01_G01 player_z=98.2
+trial1 far_1500 requested=1500 health_start=100000.0
+trial1 mid_600 requested=600 health_start=99980.0
+trial1 close_200 requested=200 health_start=99965.0
+trial1 far_1500_again requested=1500 health_start=99940.0
+trial2 far_1500 requested=1500 health_start=99930.0
+trial2 mid_600 requested=600 health_start=99915.0
+trial2 close_200 requested=200 health_start=99895.0
+trial2 far_1500_again requested=1500 health_start=99870.0
+trial3 far_1500 requested=1500 health_start=99860.0
+trial3 mid_600 requested=600 health_start=99840.0
+trial3 close_200 requested=200 health_start=99825.0
+trial3 far_1500_again requested=1500 health_start=99800.0

@@ -1,0 +1,6 @@
+run_id,tree_asset,role,displacement_cm,displacement_direction,damage_by_phase,weapon_fired_by_phase,mean_sample_rate_hz,note
+G1GUARD,BT_Test_Decorator_Guard250,control: dev-only decorator guard (d < 250),0.0 / 0.0 / 0.0 / 0.0,none,0 / 0 / 0 / 0,0 / 0 / 0 / 0,2.98,"leaf entered 12x in 8 s at 200 cm and 0x at 600 cm; no attack node, so no damage is expected"
+G1DIAG,BT_Test_Decorator_Guard250,control: runtime state diagnostic,n/a / n/a / n/a / n/a,none,n/a,n/a,n/a,BrainComponent.is_running() = 1 in 41/41 samples while get_move_status() stayed Idle
+G1P03R1,BT_Behavior_P03_G02_R1,"rebuild of candidate #5 (diagnostic instrument, not a candidate)",617.9 / 0.0 / 0.0 / 617.9,toward the player,15 / 20 / 20 / 20,1 / 1 / 1 / 1,2.98,"14 nodes, 0 property differences from BT_Behavior_P03_G02"
+G1P03ORIG,BT_Behavior_P03_G02,candidate #5 as built (preserved research artefact),834.5 / 0.0 / 0.0 / 835.1,away from the player,0 / 0 / 0 / 0,0 / 0 / 0 / 0,2.93,"identical authored graph, yet never fires; this is the as-built record, not a re-run"
+G1P03R1B,BT_Behavior_P03_G02_R1,rebuild repeated (A/B/A run order),618.2 / 0.0 / 0.0 / 618.1,toward the player,20 / 25 / 25 / 20,1 / 1 / 1 / 1,2.95,"reproduces G1P03R1, so run order cannot explain the divergence"

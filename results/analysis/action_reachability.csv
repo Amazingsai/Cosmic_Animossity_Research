@@ -1,0 +1,25 @@
+candidate_no,sample_id,action,present_in_tree,reachability,evidence,attribution
+1,P01-G01,move_to_target,yes,reached,"BTTask_EnemyMoveToTarget SUCCESS 9, FAILURE 0; 0 failures in 3 trials",none
+1,P01-G01,move_away_from_target,no,not_in_tree,tree has no retreat node; retreat_distance_cm is a dead parameter,none
+1,P01-G01,attack,yes,reached,36 damage events; 0 out-of-range refusals recovered from Saved/Logs (gap G2),none
+1,P01-G01,wait,yes,unobservable,BTTask_Wait prints nothing; position in the tree is not measurement,none
+2,P02-G01,move_to_target,yes,reached,"BTTask_EnemyMoveToTarget SUCCESS 6, FAILURE 0",none
+2,P02-G01,move_away_from_target,yes,reached,retreat SUCCESS 1 at 1718.2 cm then FAILURE (already beyond retreat range); sawtooth re-arms,none
+2,P02-G01,attack,yes,unreachable,"BTTask_EnemyAttack 0 lines, 0 damage in 3 trials; n5's own arrival band returns the pawn inside the d>800 it must satisfy",generated_logic
+2,P02-G01,wait,yes,satisfies_selector,not directly observable; a sequence ending in an unguarded Wait closes the selector before the attack sequence on every pass,generated_logic
+3,P04-G01,move_to_target,yes,reached,"BTTask_EnemyMoveToTarget SUCCESS 6, FAILURE 1 (1 arrived too far)",none
+3,P04-G01,move_away_from_target,yes,entered_never_succeeds,"retreat FAILURE 24 (23 retreat too short, 1 no target), SUCCESS 0; retreat_distance_cm 2000 exceeds the 1976 cm navmesh extent",generated_logic+environment_navigation
+3,P04-G01,attack,yes,reached,"35 damage events, 0 refusals; but only through the two bands that are satisfiable",none
+3,P04-G01,wait,yes,unobservable,BTTask_Wait prints nothing,none
+6,P07-G01,move_to_target,no,not_in_tree,tree has no approach node,none
+6,P07-G01,move_away_from_target,yes,never_executes,"retreat FAILURE 1 (no target), SUCCESS 0; FlowAbortMode=Self ends the branch 250 cm before its own success test",generated_logic
+6,P07-G01,attack,yes,entered_always_refused,"BTTask_EnemyAttack 106 entries, 106 out-of-range refusals, 0 damage; d>=900 gate against AttackRange 900 is a zero-width window",generated_logic
+6,P07-G01,wait,yes,unobservable,BTTask_Wait prints nothing,none
+5,P03-G02,move_to_target,yes,reached,"BTTask_EnemyMoveToTarget SUCCESS 21, FAILURE 1",none
+5,P03-G02,move_away_from_target,yes,reached,"retreat SUCCESS 11, FAILURE 22 (16 retreat too short, 5 already beyond range, 1 no target)",none
+5,P03-G02,attack,yes,entered_always_refused,"BTTask_EnemyAttack 1 entry, 1 refusal at ~1500 cm, 0 damage; the graph-identical rebuild BT_Behavior_P03_G02_R1 attacks 15-25 per phase, so the as-built outcome is an asset-level discrepancy, not the authored tree",compiled_asset_discrepancy
+5,P03-G02,wait,yes,unobservable,"BTTask_Wait prints nothing; phase 7F inferred two unguarded Waits were satisfying the selector, which G1 withdraws",none
+4,P01-G02,move_to_target,yes,reached,"BTTask_EnemyMoveToTarget SUCCESS 9, FAILURE 0",none
+4,P01-G02,move_away_from_target,no,not_in_tree,tree has no retreat node; retreat_distance_cm 600 is a dead parameter,none
+4,P01-G02,attack,yes,reached,55 damage events; 10 out-of-range refusals at ~950 cm proved the in-task gate is load-bearing,none
+4,P01-G02,wait,yes,unobservable,BTTask_Wait prints nothing; 0.1 s duration not measurable,none

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="540" viewBox="0 0 940 540">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="40.0" y="36.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="start" fill="#1f2933">Damage dealt per three-trial comparison, generated tree versus baseline</text>
+<text x="40.0" y="56.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#6b7280">Evaluation Set 2. Identical arena, frozen BP_AICharacter, 3 trials x 4 phases per subject. Generated total 630.0 vs baseline 2030.0 (31.0 %).</text>
+<rect x="804.0" y="26.0" width="11.0" height="11.0" rx="2" fill="#d15858" stroke="none" opacity="1.00"/>
+<text x="820.0" y="36.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#1f2933">BP_AICharacter</text>
+<rect x="692.0" y="26.0" width="11.0" height="11.0" rx="2" fill="#4a90e2" stroke="none" opacity="1.00"/>
+<text x="708.0" y="36.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#1f2933">generated tree</text>
+<line x1="92.0" y1="92.0" x2="92.0" y2="452.0" stroke="#9aa5b1" stroke-width="1.2"/>
+<line x1="92.0" y1="452.0" x2="98.0" y2="452.0" stroke="#9aa5b1" stroke-width="1.0"/>
+<text x="84.0" y="456.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="end" fill="#6b7280">0</text>
+<line x1="92.0" y1="362.0" x2="98.0" y2="362.0" stroke="#9aa5b1" stroke-width="1.0"/>
+<text x="84.0" y="366.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="end" fill="#6b7280">100</text>
+<line x1="92.0" y1="272.0" x2="98.0" y2="272.0" stroke="#9aa5b1" stroke-width="1.0"/>
+<text x="84.0" y="276.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="end" fill="#6b7280">200</text>
+<line x1="92.0" y1="182.0" x2="98.0" y2="182.0" stroke="#9aa5b1" stroke-width="1.0"/>
+<text x="84.0" y="186.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="end" fill="#6b7280">300</text>
+<line x1="92.0" y1="92.0" x2="98.0" y2="92.0" stroke="#9aa5b1" stroke-width="1.0"/>
+<text x="84.0" y="96.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="end" fill="#6b7280">400</text>
+<text x="18.0" y="272.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="middle" fill="#6b7280">damage dealt</text>
+<rect x="118.7" y="290.0" width="36.0" height="162.0" rx="0" fill="#4a90e2" stroke="none" opacity="1.00"/>
+<text x="136.7" y="284.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1f2933">180</text>
+<rect x="160.7" y="150.5" width="36.0" height="301.5" rx="0" fill="#d15858" stroke="none" opacity="1.00"/>
+<text x="178.7" y="144.5" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1f2933">335</text>
+<text x="157.7" y="472.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2933">#1</text>
+<text x="157.7" y="488.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#6b7280">P01-G01</text>
+<text x="157.7" y="502.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="9" font-weight="normal" text-anchor="middle" fill="#6b7280">53.7% of base</text>
+<rect x="250.0" y="452.0" width="36.0" height="1.0" rx="0" fill="#4a90e2" stroke="none" opacity="1.00"/>
+<text x="268.0" y="446.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1f2933">0</text>
+<rect x="292.0" y="146.0" width="36.0" height="306.0" rx="0" fill="#d15858" stroke="none" opacity="1.00"/>
+<text x="310.0" y="140.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1f2933">340</text>
+<text x="289.0" y="472.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2933">#2</text>
+<text x="289.0" y="488.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#6b7280">P02-G01</text>
+<text x="289.0" y="502.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="9" font-weight="normal" text-anchor="middle" fill="#6b7280">0.0% of base</text>
+<rect x="381.3" y="294.5" width="36.0" height="157.5" rx="0" fill="#4a90e2" stroke="none" opacity="1.00"/>
+<text x="399.3" y="288.5" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1f2933">175</text>
+<rect x="423.3" y="164.0" width="36.0" height="288.0" rx="0" fill="#d15858" stroke="none" opacity="1.00"/>
+<text x="441.3" y="158.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1f2933">320</text>
+<text x="420.3" y="472.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2933">#3</text>
+<text x="420.3" y="488.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#6b7280">P04-G01</text>
+<text x="420.3" y="502.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="9" font-weight="normal" text-anchor="middle" fill="#6b7280">54.7% of base</text>
+<rect x="512.7" y="452.0" width="36.0" height="1.0" rx="0" fill="#4a90e2" stroke="none" opacity="1.00"/>
+<text x="530.7" y="446.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1f2933">0</text>
+<rect x="554.7" y="164.0" width="36.0" height="288.0" rx="0" fill="#d15858" stroke="none" opacity="1.00"/>
+<text x="572.7" y="158.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1f2933">320</text>
+<text x="551.7" y="472.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2933">#6</text>
+<text x="551.7" y="488.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#6b7280">P07-G01</text>
+<text x="551.7" y="502.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="9" font-weight="normal" text-anchor="middle" fill="#6b7280">0.0% of base</text>
+<rect x="644.0" y="452.0" width="36.0" height="1.0" rx="0" fill="#4a90e2" stroke="none" opacity="1.00"/>
+<text x="662.0" y="446.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1f2933">0</text>
+<rect x="686.0" y="155.0" width="36.0" height="297.0" rx="0" fill="#d15858" stroke="none" opacity="1.00"/>
+<text x="704.0" y="149.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1f2933">330</text>
+<text x="683.0" y="472.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2933">#5</text>
+<text x="683.0" y="488.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#6b7280">P03-G02</text>
+<text x="683.0" y="502.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="9" font-weight="normal" text-anchor="middle" fill="#6b7280">0.0% of base</text>
+<rect x="775.3" y="204.5" width="36.0" height="247.5" rx="0" fill="#4a90e2" stroke="none" opacity="1.00"/>
+<text x="793.3" y="198.5" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1f2933">275</text>
+<rect x="817.3" y="105.5" width="36.0" height="346.5" rx="0" fill="#d15858" stroke="none" opacity="1.00"/>
+<text x="835.3" y="99.5" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#1f2933">385</text>
+<text x="814.3" y="472.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2933">#4</text>
+<text x="814.3" y="488.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="middle" fill="#6b7280">P01-G02</text>
+<text x="814.3" y="502.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="9" font-weight="normal" text-anchor="middle" fill="#6b7280">71.4% of base</text>
+<line x1="92.0" y1="452.0" x2="880.0" y2="452.0" stroke="#9aa5b1" stroke-width="1.2"/>
+</svg>

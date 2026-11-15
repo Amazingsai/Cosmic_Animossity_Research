@@ -1,0 +1,6 @@
+run_id,phase,requested_cm,duration_s,samples,sample_rate_hz,damage_events,damage_total,max_geo_at_damage_cm,min_geo_at_damage_cm,first_damage_s,enemy_moved_cm,enemy_start_y,enemy_end_y,enemy_end_geo_cm,bb_dist_min,bb_dist_max,bb_can_attack_true_rate,projectiles_max,samples_with_projectile,projectile_samples_total,weapon_fired,last_fire_start,last_fire_end,enemy_health_start,enemy_health_end
+p7p01g2_probe1,far_1500,1500,8.0,473,59.1,5,25.0,183.8,183.8,3.019,1320.1,600.0,-719.6,183.8,183.8,1500.0,0.298,1,15,15,1,0.000,7.361,500.0,500.0
+p7p01g2_probe1,mid_600,600,8.0,471,58.9,7,35.0,132.0,132.0,1.266,472.6,600.0,128.3,132.0,132.0,600.1,0.172,1,14,14,1,7.361,15.793,500.0,500.0
+p7p01g2_probe1,close_200,200,8.0,479,59.9,7,35.0,200.2,200.2,0.716,0.0,600.0,600.0,200.2,132.0,200.2,0.050,1,28,28,1,15.793,24.208,500.0,500.0
+p7p01g2_probe1,boundary_250,250,8.0,470,58.8,8,40.0,250.1,183.6,0.085,68.2,600.0,533.0,183.6,183.6,250.1,0.064,1,25,25,1,24.208,31.684,500.0,500.0
+p7p01g2_probe1,far_1500_again,1500,6.0,351,58.5,3,15.0,174.9,174.9,2.947,1329.2,600.0,-728.7,174.9,174.9,1500.0,0.430,1,8,8,1,31.684,37.329,500.0,500.0

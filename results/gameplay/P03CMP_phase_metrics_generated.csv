@@ -1,0 +1,13 @@
+run_id,subject,tree,trial,phase,requested_cm,duration_s,samples,sample_rate_hz,damage_events,damage_total,health_at_phase_start,max_geo_at_damage_cm,min_geo_at_damage_cm,max_bb_at_damage_cm,first_damage_s,subject_moved_cm,subject_start_y,subject_end_y,subject_end_geo_cm,enemy_health_start,enemy_health_end,bb_health_percent_min,bb_health_percent_max,bb_can_attack_true_rate
+p7cmp_p03g2_r1,generated,/Game/Research/AI/BT_Behavior_P03_G02.BT_Behavior_P03_G02,1,far_1500,1500,8.0,24,3.0,0,0.0,100000.0,-1.0,-1.0,-1.0,-1.000,835.1,600.0,1434.0,2334.4,500.0,500.0,1.0,1.0,0.958
+p7cmp_p03g2_r1,generated,/Game/Research/AI/BT_Behavior_P03_G02.BT_Behavior_P03_G02,1,mid_600,600,6.0,17,2.8,0,0.0,100000.0,-1.0,-1.0,-1.0,-1.000,0.0,600.0,600.0,600.1,500.0,500.0,1.0,1.0,1.000
+p7cmp_p03g2_r1,generated,/Game/Research/AI/BT_Behavior_P03_G02.BT_Behavior_P03_G02,1,close_200,200,6.0,18,3.0,0,0.0,100000.0,-1.0,-1.0,-1.0,-1.000,0.0,600.0,600.0,200.2,500.0,500.0,1.0,1.0,1.000
+p7cmp_p03g2_r1,generated,/Game/Research/AI/BT_Behavior_P03_G02.BT_Behavior_P03_G02,1,far_1500_again,1500,6.0,18,3.0,0,0.0,100000.0,-1.0,-1.0,-1.0,-1.000,335.0,600.0,933.3,1833.6,500.0,500.0,1.0,1.0,1.000
+p7cmp_p03g2_r1,generated,/Game/Research/AI/BT_Behavior_P03_G02.BT_Behavior_P03_G02,2,far_1500,1500,8.0,24,3.0,0,0.0,100000.0,-1.0,-1.0,-1.0,-1.000,335.3,600.0,265.3,1165.5,500.0,500.0,1.0,1.0,1.000
+p7cmp_p03g2_r1,generated,/Game/Research/AI/BT_Behavior_P03_G02.BT_Behavior_P03_G02,2,mid_600,600,6.0,17,2.8,0,0.0,100000.0,-1.0,-1.0,-1.0,-1.000,833.2,600.0,1432.3,1432.9,500.0,500.0,1.0,1.0,1.000
+p7cmp_p03g2_r1,generated,/Game/Research/AI/BT_Behavior_P03_G02.BT_Behavior_P03_G02,2,close_200,200,6.0,17,2.8,0,0.0,100000.0,-1.0,-1.0,-1.0,-1.000,0.0,600.0,600.0,200.2,500.0,500.0,1.0,1.0,1.000
+p7cmp_p03g2_r1,generated,/Game/Research/AI/BT_Behavior_P03_G02.BT_Behavior_P03_G02,2,far_1500_again,1500,6.0,18,3.0,0,0.0,100000.0,-1.0,-1.0,-1.0,-1.000,392.8,600.0,982.7,1884.8,500.0,500.0,1.0,1.0,1.000
+p7cmp_p03g2_r1,generated,/Game/Research/AI/BT_Behavior_P03_G02.BT_Behavior_P03_G02,3,far_1500,1500,8.0,23,2.9,0,0.0,100000.0,-1.0,-1.0,-1.0,-1.000,242.5,600.0,364.9,1266.3,500.0,500.0,1.0,1.0,1.000
+p7cmp_p03g2_r1,generated,/Game/Research/AI/BT_Behavior_P03_G02.BT_Behavior_P03_G02,3,mid_600,600,6.0,17,2.8,0,0.0,100000.0,-1.0,-1.0,-1.0,-1.000,820.0,600.0,1412.8,1417.0,500.0,500.0,1.0,1.0,1.000
+p7cmp_p03g2_r1,generated,/Game/Research/AI/BT_Behavior_P03_G02.BT_Behavior_P03_G02,3,close_200,200,6.0,18,3.0,0,0.0,100000.0,-1.0,-1.0,-1.0,-1.000,0.0,600.0,600.0,200.2,500.0,500.0,1.0,1.0,1.000
+p7cmp_p03g2_r1,generated,/Game/Research/AI/BT_Behavior_P03_G02.BT_Behavior_P03_G02,3,far_1500_again,1500,6.0,17,2.8,0,0.0,100000.0,-1.0,-1.0,-1.0,-1.000,170.6,600.0,767.9,1668.2,500.0,500.0,1.0,1.0,1.000

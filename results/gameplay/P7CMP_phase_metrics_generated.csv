@@ -1,0 +1,13 @@
+run_id,subject,tree,trial,phase,requested_cm,duration_s,samples,sample_rate_hz,damage_events,damage_total,health_at_phase_start,max_geo_at_damage_cm,min_geo_at_damage_cm,max_bb_at_damage_cm,first_damage_s,subject_moved_cm,subject_start_y,subject_end_y
+p7cmp_r1,generated,/Game/Research/AI/BT_Behavior_P01_G01.BT_Behavior_P01_G01,1,far_1500,1500,8.0,24,3.0,3,15.0,100000.0,218.6,218.6,218.6,4.231,1284.5,600.0,-684.1
+p7cmp_r1,generated,/Game/Research/AI/BT_Behavior_P01_G01.BT_Behavior_P01_G01,1,mid_600,600,6.0,18,3.0,3,15.0,99980.0,152.5,152.5,152.5,2.993,451.3,600.0,149.6
+p7cmp_r1,generated,/Game/Research/AI/BT_Behavior_P01_G01.BT_Behavior_P01_G01,1,close_200,200,6.0,17,2.8,4,20.0,99965.0,200.2,200.2,200.2,0.688,0.0,600.0,600.0
+p7cmp_r1,generated,/Game/Research/AI/BT_Behavior_P01_G01.BT_Behavior_P01_G01,1,far_1500_again,1500,6.0,18,3.0,2,10.0,99940.0,218.6,218.6,218.6,4.648,1284.5,600.0,-684.1
+p7cmp_r1,generated,/Game/Research/AI/BT_Behavior_P01_G01.BT_Behavior_P01_G01,2,far_1500,1500,8.0,23,2.9,3,15.0,99930.0,218.4,218.4,218.4,4.340,1284.7,600.0,-684.3
+p7cmp_r1,generated,/Game/Research/AI/BT_Behavior_P01_G01.BT_Behavior_P01_G01,2,mid_600,600,6.0,17,2.8,3,15.0,99915.0,152.6,152.6,152.6,2.332,451.2,600.0,149.7
+p7cmp_r1,generated,/Game/Research/AI/BT_Behavior_P01_G01.BT_Behavior_P01_G01,2,close_200,200,6.0,17,2.8,4,20.0,99895.0,200.2,200.2,200.2,1.677,0.0,600.0,600.0
+p7cmp_r1,generated,/Game/Research/AI/BT_Behavior_P01_G01.BT_Behavior_P01_G01,2,far_1500_again,1500,6.0,18,3.0,2,10.0,99870.0,218.5,218.5,218.5,4.329,1284.6,600.0,-684.2
+p7cmp_r1,generated,/Game/Research/AI/BT_Behavior_P01_G01.BT_Behavior_P01_G01,3,far_1500,1500,8.0,23,2.9,3,15.0,99860.0,218.3,218.3,218.3,4.013,1284.8,600.0,-684.4
+p7cmp_r1,generated,/Game/Research/AI/BT_Behavior_P01_G01.BT_Behavior_P01_G01,3,mid_600,600,6.0,17,2.8,3,15.0,99840.0,152.6,152.6,152.6,3.001,451.2,600.0,149.7
+p7cmp_r1,generated,/Game/Research/AI/BT_Behavior_P01_G01.BT_Behavior_P01_G01,3,close_200,200,6.0,18,3.0,4,20.0,99825.0,200.2,200.2,200.2,0.998,0.0,600.0,600.0
+p7cmp_r1,generated,/Game/Research/AI/BT_Behavior_P01_G01.BT_Behavior_P01_G01,3,far_1500_again,1500,6.0,18,3.0,2,10.0,99800.0,218.6,218.6,218.6,4.670,1284.6,600.0,-684.2

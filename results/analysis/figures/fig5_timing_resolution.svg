@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="500" viewBox="0 0 940 500">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="40.0" y="36.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="start" fill="#1f2933">Measurement resolution against the differences being claimed</text>
+<text x="40.0" y="56.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#6b7280">Bars are seconds. The dashed line is the resolution floor at 2.9 Hz; a latency difference at or below it is not supported by the instrument that measured it.</text>
+<rect x="774.0" y="26.0" width="11.0" height="11.0" rx="2" fill="#d15858" stroke="none" opacity="1.00"/>
+<text x="790.0" y="36.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#1f2933">within quantisation</text>
+<rect x="620.0" y="26.0" width="11.0" height="11.0" rx="2" fill="#41a161" stroke="none" opacity="1.00"/>
+<text x="636.0" y="36.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="start" fill="#1f2933">resolvable difference</text>
+<line x1="316.6" y1="92.0" x2="316.6" y2="430.0" stroke="#d15858" stroke-width="1.6" stroke-dasharray="6,5"/>
+<text x="324.6" y="86.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#d15858">resolution floor 0.344 s (2.9 Hz)</text>
+<text x="236.0" y="121.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#1f2933">+/-0.344 s</text>
+<rect x="250.0" y="100.0" width="66.6" height="34.0" rx="0" fill="#6b7280" stroke="none" opacity="1.00"/>
+<text x="324.6" y="121.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#6b7280">resolution at 2.9 Hz</text>
+<text x="236.0" y="169.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#1f2933">+/-0.017 s</text>
+<rect x="250.0" y="148.0" width="3.3" height="34.0" rx="0" fill="#6b7280" stroke="none" opacity="1.00"/>
+<text x="261.3" y="169.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#6b7280">resolution at 59 Hz</text>
+<text x="236.0" y="217.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#1f2933">2.89 s</text>
+<rect x="250.0" y="196.0" width="559.9" height="34.0" rx="0" fill="#41a161" stroke="none" opacity="1.00"/>
+<text x="817.9" y="217.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#6b7280">#1 far_1500 latency gap</text>
+<text x="236.0" y="265.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#1f2933">1.18 s</text>
+<rect x="250.0" y="244.0" width="228.6" height="34.0" rx="0" fill="#41a161" stroke="none" opacity="1.00"/>
+<text x="486.6" y="265.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#6b7280">#4 whole-run latency gap</text>
+<text x="236.0" y="313.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#1f2933">0.94 s</text>
+<rect x="250.0" y="292.0" width="182.1" height="34.0" rx="0" fill="#41a161" stroke="none" opacity="1.00"/>
+<text x="440.1" y="313.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#6b7280">#3 whole-run latency gap</text>
+<text x="236.0" y="361.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" text-anchor="end" fill="#1f2933">0.10 s</text>
+<rect x="250.0" y="340.0" width="19.4" height="34.0" rx="0" fill="#d15858" stroke="none" opacity="1.00"/>
+<text x="277.4" y="361.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="normal" text-anchor="start" fill="#6b7280">#1 close_200 gap (not a difference)</text>
+<line x1="250.0" y1="430.0" x2="880.0" y2="430.0" stroke="#9aa5b1" stroke-width="1.2"/>
+</svg>
