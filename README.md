@@ -186,14 +186,6 @@ The research dataset contains 40 generated behavior trees from 10 prompt familie
 
 The project includes saved generation outputs, validation results, and gameplay evaluation data.
 
-The Week 11 dataset split uses:
-
-| Dataset | Percentage | Outputs |
-|---|---:|---:|
-| Training | 70% | 28 |
-| Test | 20% | 8 |
-| Validation | 10% | 4 |
-
 ## Research Findings
 
 The experiments produced three major findings:
