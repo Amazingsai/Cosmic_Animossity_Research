@@ -34,7 +34,7 @@ The Python analysis can be reproduced separately from Unreal Engine using the pr
 
 1. Open the public repository:
 
-   https://github.com/Amazingsai/Cosmic_Animossity
+   https://github.com/Amazingsai/Cosmic_Animossity_Research
 
 2. Select **Code → Download ZIP**.
 3. Extract the ZIP to a local folder.
