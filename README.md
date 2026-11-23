@@ -1,103 +1,209 @@
-Cosmic Animosity is a first-person shooter game being developed using Unreal Engine 5. The game takes place in a space-themed environment where the player fights against enemies while moving around an arena. 
+# Cosmic Animosity — LLM-Generated Enemy Behavior Trees
 
-The project focuses on creating a fast-paced combat experience with different player movement abilities and enemy AI systems. 
+## Project Overview
 
-  
+Cosmic Animosity is an Unreal Engine 5.7 first-person shooter used as a research environment to investigate the feasibility of generating enemy behavior trees with large language models (LLMs).
 
-Gameplay: 
+This DS 340W research project uses GPT-4.1 to generate JSON representations of enemy behavior trees, validates the generated structures using Python, and evaluates selected behaviors in Unreal Engine against an existing baseline enemy AI.
 
-  
+The project investigates whether LLM-generated behavior trees can be validated, implemented, and executed successfully in gameplay.
 
-The player controls a first-person character who can move around the environment and fight enemies. The game includes shooting mechanics, dashing, and other movement abilities that allow the player to navigate the arena. 
+## Research Questions
 
-Enemies are designed to follow the player and attack when they are within range. The enemy AI is currently being developed to support more advanced behaviors. 
+1. Can LLM-generated behavior trees satisfy structural, action, and logical validation requirements?
+2. How do selected generated behavior trees perform in Unreal Engine compared with an existing baseline enemy AI?
+3. What limitations are revealed when generated behavior trees are tested in gameplay?
 
-  
+## Software Requirements
 
-Features: 
+For Python analysis:
 
-  
+- Windows 10 or 11
+- Python 3
+- Python dependencies required by the analysis scripts
+- Git or a web browser for downloading the repository
 
-- First-person player movement 
+For Unreal Engine gameplay:
 
-- Shooting and combat mechanics 
+- Unreal Engine 5.7
+- A Windows computer capable of running the Unreal project
 
-- Enemy AI that follows and attacks the player 
+The Python analysis can be reproduced separately from Unreal Engine using the preserved experimental data.
 
-- Space-themed arena environment 
+## Downloading the Repository
 
-- Player movement abilities 
+1. Open the public repository:
 
-- Enemy spawning system 
+   https://github.com/Amazingsai/Cosmic_Animossity
 
-  
+2. Select **Code → Download ZIP**.
+3. Extract the ZIP to a local folder.
+4. Open the extracted project folder in Visual Studio Code or PowerShell.
 
-Some features are still under development and may not work as intended. 
+All commands below should be executed from the repository's root directory.
 
-  
+## Reproducing the Research Analysis
 
-Development: 
+### Step 1: Verify Python
 
-  
+Open PowerShell and enter:
 
-Cosmic Animosity is being developed using Unreal Engine 5 and its Blueprint visual scripting system. Blueprints are used to create gameplay mechanics, character interactions, and enemy behaviors. 
+```powershell
+python --version
+```
 
-The project is also being used to explore artificial intelligence in video games, particularly how enemy behavior can be improved to create more engaging gameplay. Aura is being used for this project. 
+Verify that Python is available.
 
-  
+### Step 2: Install Dependencies
 
-How to Run the Project: 
+Install the dependencies required by the repository's Python scripts.
 
-  
+If the repository includes a maintained `requirements.txt`, use:
 
-1. Install Unreal Engine 5. 
+```powershell
+python -m pip install -r requirements.txt
+```
 
-2. Download the project files from this repository. 
+### Step 3: Generate the Analysis Tables
 
-3. Extract the downloaded files. 
+Run:
 
-4. Open the Unreal Engine project file. 
+```powershell
+python scripts/build_analysis.py
+```
 
-5. Wait for the project to load. 
+This script processes the preserved validation and gameplay results and generates eight CSV analysis files in:
 
-6. Open the main game level. 
+```text
+results/analysis/
+```
 
-7. Click Play to start the game. 
+Expected damage cross-check:
 
-  
+```text
+generated damage:
+[180.0, 0.0, 175.0, 0.0, 0.0, 275.0]
 
-Current Status: 
+baseline damage:
+[335.0, 340.0, 320.0, 320.0, 330.0, 385.0]
 
-  
+totals generated=630.0 baseline=2030.0 (31.0 %)
 
-The project is still in development. Basic player movement, combat, and enemy AI have been implemented. Additional features and improvements are planned. 
+zero-damage candidates:
+[2, 6, 5] (3 of 6)
+```
 
-  
+### Step 4: Generate Research Figures
 
-Future Improvements: 
+Run:
 
-  
+```powershell
+python scripts/make_figures.py
+```
 
-- Improve enemy AI decision-making 
+This generates seven SVG figures in:
 
-- Add more enemy behaviors 
+```text
+results/analysis/figures/
+```
 
-- Improve combat mechanics 
+The figures visualize validation classifications, gameplay damage, action reachability, failure attribution, timing limitations, and the Candidate #5 rebuild investigation.
 
-- Add more visual effects and animations 
+### Step 5: Verify the Results
 
-- Improve gameplay balance 
+The expected automated validation results for the 40 generated behavior trees are:
 
-- Continue testing and debugging 
+| Measurement | Result |
+|---|---:|
+| Generated outputs | 40 |
+| JSON-readable outputs | 40 |
+| Structurally valid outputs | 26 |
+| Supported-action checks passed | 40 |
+| VALID classification | 12 |
+| REVIEW classification | 14 |
+| INVALID classification | 14 |
+| Outputs flagged for correction or review | 28 |
 
-  
+The expected gameplay results are:
 
-Author: 
+| Candidate | Generated Damage | Baseline Damage |
+|---|---:|---:|
+| #1 | 180 | 335 |
+| #2 | 0 | 340 |
+| #3 | 175 | 320 |
+| #6 | 0 | 320 |
+| #5 | 0 | 330 |
+| #4 | 275 | 385 |
+| **Total** | **630** | **2030** |
 
-  
+Three of the six generated candidates successfully dealt damage during the original gameplay comparisons.
 
-Isaiah Cordon 
+The generated AI dealt approximately 31% of the baseline's total damage. However, the baseline and generated enemies followed different attack-range and combat policies, so damage alone does not establish overall AI quality.
 
-  
+## Candidate #5 Rebuild Investigation
 
-Developed as a personal game development project using Unreal Engine 5. 
+Candidate #5 originally dealt zero damage during the gameplay comparison.
+
+A separate diagnostic investigation rebuilt its behavior tree using the same visible graph structure. The rebuilt tree successfully attacked and dealt approximately 15–25 damage per diagnostic phase.
+
+This suggests an Unreal Engine asset-level discrepancy rather than a confirmed failure in the generated logic. The exact internal cause was not established.
+
+These diagnostic results are stored separately in:
+
+```text
+results/analysis/phase7h_rebuild_diagnostics.csv
+```
+
+The rebuilt results are not included in the original gameplay damage totals.
+
+## Unreal Engine Implementation
+
+The Unreal Engine project contains the original enemy AI and the experimental behavior-tree implementation.
+
+Important research components include:
+
+- `BP_AICharacter`: Original baseline enemy AI
+- `BP_BasicEnemyAI`: Experimental enemy character
+- `AIController_ResearchEnemy`: Research AI controller
+- `BB_EnemyBehavior`: Blackboard used for enemy decision-making
+- `BTTask_EnemyAttack`: Custom enemy attack task
+- Generated behavior-tree assets adapted for Unreal Engine
+
+To open the Unreal project:
+
+1. Install Unreal Engine 5.7.
+2. Download and extract the repository.
+3. Open the project's `.uproject` file.
+4. Allow Unreal Engine to load and compile the required assets.
+5. Open the appropriate gameplay level.
+6. Use Play-in-Editor to inspect the enemy behavior.
+
+The Python analysis scripts do not rerun Unreal gameplay experiments. They reproduce the analysis and visualizations from saved experimental results.
+
+## Dataset
+
+The research dataset contains 40 generated behavior trees from 10 prompt families.
+
+## Research Findings
+
+The experiments produced three major findings:
+
+1. GPT-4.1 successfully generated 40 JSON-readable behavior-tree outputs, but only 12 passed all automated validation checks.
+2. Passing automated validation did not guarantee successful Unreal Engine execution. Some structurally valid trees still failed to perform their intended attacks.
+3. Gameplay testing and implementation diagnostics revealed problems that could not be established through JSON validation alone.
+
+The results support using automated validation as an initial screening stage, followed by actual gameplay testing before generated behavior trees are accepted for use.
+
+## Limitations
+
+The study used one LLM configuration, one Unreal Engine arena, and six purposively selected gameplay candidates. The player remained stationary during the main comparisons, and certain defensive or low-health behaviors were not fully exercised.
+
+Consequently, the results should not be interpreted as general performance estimates for all LLM-generated enemy behavior trees.
+
+## Future Work
+
+Future research could compare multiple LLMs, fine-tune a model on behavior-tree examples, expand automated execution checks, and incorporate developer and player feedback during gameplay testing.
+
+## Repository
+
+https://github.com/Amazingsai/Cosmic_Animossity
